@@ -17,6 +17,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    height: 100vh;
 }
 
 header{
@@ -52,15 +54,6 @@ main{
     position: absolute;
     image-rendering: crisp-edges;
     z-index: -1;
-}
-
-.cell{
-    width: var(--size-cell);
-    height: var(--size-cell);
-}
-.cellIndex{
-    font-size: 0.8em;
-    color: var(--color-border);
 }
 
 .piece{
