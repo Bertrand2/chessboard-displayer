@@ -30,12 +30,40 @@ header{
 }
 
 main{
-    border: var(--size-border) solid var(--color-border);
-    height: var(--size-grid);
-    width: var(--size-grid);
+    display: grid;
+    grid-template: 20px , 1fr / 20px , 1fr;
+    grid-template-areas: 
+    ". letters"
+    "digits gamebox";
+}
+.letters{
+    grid-area: letters;
+    padding: var(--size-border);
+    background-color: var(--color-blackCell);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.digits{
+    grid-area: digits;
+    padding: var(--size-border);
+    background-color: var(--color-blackCell);
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #gameBox{
+    border: var(--size-border) solid var(--color-border);
+    height: var(--size-grid);
+    width: var(--size-grid);
+
+    grid-area: gamebox;
+
     display: grid;
     grid-template: repeat(8 , var(--size-cell)) / repeat(8 , var(--size-cell));
     grid-template-areas: 
